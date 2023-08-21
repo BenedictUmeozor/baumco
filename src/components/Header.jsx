@@ -93,11 +93,15 @@ const Header = () => {
             <NavLink
               to="/"
               className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small block mb-4 p-3"
+              onClick={() => setMobileShow(false)}
             >
               Home
             </NavLink>
             <div className="relative">
-              <p className="cursor-pointer flex items-center gap-1 transition-all duration-150 hover:text-emerald-500 font-poppins text-small mb-4 p-3">
+              <p
+                className="cursor-pointer flex items-center gap-1 transition-all duration-150 hover:text-emerald-500 font-poppins text-small mb-4 p-3"
+                onClick={() => setMobileShow(false)}
+              >
                 Electronics
                 <ChevronDown className="w-5" />
               </p>
@@ -133,12 +137,14 @@ const Header = () => {
             <NavLink
               to="/forum"
               className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small block mb-4 p-3"
+              onClick={() => setMobileShow(false)}
             >
               Forum
             </NavLink>
             <NavLink
               to="/contact"
               className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small block mb-4 p-3"
+              onClick={() => setMobileShow(false)}
             >
               Contact
             </NavLink>
