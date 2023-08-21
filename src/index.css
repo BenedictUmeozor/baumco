@@ -1,3 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+header nav a.active {
+  color: #10b981;
+}
+
+.container {
+  @apply max-w-6xl px-2 mx-auto;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.flex-small {
+  @apply flex items-center gap-2;
+}
+
+.text-small {
+  font-size: 0.97rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.menu-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 60%;
+  max-width: 250px;
+  z-index: 20;
+  min-height: 100vh;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-nav.active {
+    right: 0;
+}
