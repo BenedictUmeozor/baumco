@@ -6,6 +6,15 @@ const Header = () => {
   const [show, setShow] = useState(false);
   const [mobileShow, setMobileShow] = useState(false);
 
+  const openNav = () => {
+    setMobileShow((prev) => !prev);
+    if (mobileShow) {
+      document.body.classList.remove("overflow-hidden");
+    } else {
+      document.body.classList.add("overflow-hidden");
+    }
+  };
+
   return (
     <header className="py-4 sticky top-0">
       <div className="container flex-between">
@@ -95,22 +104,18 @@ const Header = () => {
             Signup
           </NavLink>
         </div>
-        <div
-          className="md:hidden z-50"
-          onClick={() => setMobileShow((prev) => !prev)}
-        >
-          {mobileShow ? (
-            <XMarkIcon className="w-10 cursor-pointer" />
-          ) : (
-            <MenuIcon className="w-10 cursor-pointer" />
-          )}
+        <div className="md:hidden z-50" onClick={openNav}>
+          <MenuIcon className="w-10 cursor-pointer" />
         </div>
         <nav className={`md:hidden menu-nav ${mobileShow ? "active" : ""}`}>
           <div className="md:hidden nav-links p-3 pt-10">
+            <div className="flex justify-end mb-4" onClick={openNav}>
+              <XMarkIcon className="w-10 cursor-pointer" />
+            </div>
             <NavLink
               to="/"
               className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small block mb-4 p-3 hover:bg-gray-50 border-b border-b-gray-100"
-              onClick={() => setMobileShow(false)}
+              onClick={openNav}
             >
               Home
             </NavLink>
@@ -127,25 +132,37 @@ const Header = () => {
                 <NavLink
                   to="/electronics/analog"
                   className="py-2 px-3 border-b border-b-gray-100 text-small transition-all duration-150 hover:text-emerald-500 hover:bg-gray-50"
-                >
+               onClick={() => {
+                openNav()
+                setShow(false)
+               }} >
                   Analog
                 </NavLink>
                 <NavLink
                   to="/electronics/digital"
                   className="py-2 px-3 border-b border-b-gray-100 text-small transition-all duration-150 hover:text-emerald-500 hover:bg-gray-50"
-                >
+               onClick={() => {
+                openNav()
+                setShow(false)
+               }} >
                   Digital
                 </NavLink>
                 <NavLink
                   to="/electronics/embeded-systems"
                   className="py-2 px-3 border-b border-b-gray-100 text-small transition-all duration-150 hover:text-emerald-500 hover:bg-gray-50"
-                >
+                onClick={() => {
+                  openNav()
+                  setShow(false)
+                }}>
                   Embedded Systems
                 </NavLink>
                 <NavLink
                   to="/electronics/internet-of-things"
                   className="py-2 px-3 border-b border-b-gray-100 text-small transition-all duration-150 hover:text-emerald-500 hover:bg-gray-50"
-                >
+                onClick={() => {
+                  openNav()
+                  setShow(false)
+                }}>
                   Internet of things
                 </NavLink>
               </div>
@@ -153,14 +170,14 @@ const Header = () => {
             <NavLink
               to="/forum"
               className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small block mb-4 p-3 hover:bg-gray-50 border-b border-b-gray-100"
-              onClick={() => setMobileShow(false)}
+              onClick={openNav}
             >
               Forum
             </NavLink>
             <NavLink
               to="/contact"
               className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small block mb-4 p-3 hover:bg-gray-50 border-b border-b-gray-100"
-              onClick={() => setMobileShow(false)}
+              onClick={openNav}
             >
               Contact
             </NavLink>

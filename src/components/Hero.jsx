@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import hero from "../assets/hero.svg";
 
 const Hero = ({ className }) => {
@@ -8,7 +9,7 @@ const Hero = ({ className }) => {
           <img className="w-full md:max-w-md" src={hero} alt="hero" />
         </div>
         <p className="flex-1 text-gray-700">
-          Elevate your tech prowess with BAUMco. Immerse in programming
+          Elevate your tech prowess with <Link to={'/'} className="text-emerald-500 hover:underline">BAUMco</Link>. Immerse in programming
           insights, latest trends, and tutorials. Empower your journey in the
           world of tech and programming excellence.
         </p>
