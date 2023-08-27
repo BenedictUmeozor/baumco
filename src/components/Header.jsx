@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { ChevronDown, MenuIcon, XMarkIcon } from "../assets/icons";
+import { ChevronDown, FacebookIcon, InstagramIcon, LinkedinIcon, MenuIcon, TwitterIcon, XMarkIcon } from "../assets/icons";
 import { useState } from "react";
 
 const Header = () => {
@@ -132,37 +132,41 @@ const Header = () => {
                 <NavLink
                   to="/electronics/analog"
                   className="py-2 px-3 border-b border-b-gray-100 text-small transition-all duration-150 hover:text-emerald-500 hover:bg-gray-50"
-               onClick={() => {
-                openNav()
-                setShow(false)
-               }} >
+                  onClick={() => {
+                    openNav();
+                    setShow(false);
+                  }}
+                >
                   Analog
                 </NavLink>
                 <NavLink
                   to="/electronics/digital"
                   className="py-2 px-3 border-b border-b-gray-100 text-small transition-all duration-150 hover:text-emerald-500 hover:bg-gray-50"
-               onClick={() => {
-                openNav()
-                setShow(false)
-               }} >
+                  onClick={() => {
+                    openNav();
+                    setShow(false);
+                  }}
+                >
                   Digital
                 </NavLink>
                 <NavLink
                   to="/electronics/embeded-systems"
                   className="py-2 px-3 border-b border-b-gray-100 text-small transition-all duration-150 hover:text-emerald-500 hover:bg-gray-50"
-                onClick={() => {
-                  openNav()
-                  setShow(false)
-                }}>
+                  onClick={() => {
+                    openNav();
+                    setShow(false);
+                  }}
+                >
                   Embedded Systems
                 </NavLink>
                 <NavLink
                   to="/electronics/internet-of-things"
                   className="py-2 px-3 border-b border-b-gray-100 text-small transition-all duration-150 hover:text-emerald-500 hover:bg-gray-50"
-                onClick={() => {
-                  openNav()
-                  setShow(false)
-                }}>
+                  onClick={() => {
+                    openNav();
+                    setShow(false);
+                  }}
+                >
                   Internet of things
                 </NavLink>
               </div>
@@ -181,6 +185,29 @@ const Header = () => {
             >
               Contact
             </NavLink>
+            <NavLink
+              to="/login"
+              className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small block mb-4 p-3 hover:bg-gray-50 border-b border-b-gray-100"
+              onClick={openNav}
+            >
+              Login
+            </NavLink>
+            <NavLink
+              to="/signup"
+              className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small block mb-4 p-3 hover:bg-gray-50 rounded bg-emerald-500 text-white border-2 border-transparent hover:border-emerald-500"
+              onClick={openNav}
+            >
+              Signup
+            </NavLink>
+            <div className="mt-4">
+              <Link to="/" className="inline-block mt-4 text-emerald-500 font-semibold font-poppins text-xl">BAUMco</Link>
+            </div>
+              <div className="flex gap-2 mt-3 mb-4">
+                <LinkedinIcon className="" />
+                <FacebookIcon className="" />
+                <InstagramIcon className="" />
+                <TwitterIcon className="" />
+              </div>
           </div>
         </nav>
       </div>
