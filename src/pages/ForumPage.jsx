@@ -12,7 +12,7 @@ const ForumPage = () => {
       <section>
         <div className="container grid md:grid-cols-3 gap-4">
           <div className="col-span-2">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 mb-4">
               <h2 className="text-lg uppercase font-bold tracking-wider text-gray-600 order-2">
                 Forums
               </h2>

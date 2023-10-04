@@ -1,5 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
-import { ChevronDown, FacebookIcon, InstagramIcon, LinkedinIcon, MenuIcon, TwitterIcon, XMarkIcon } from "../assets/icons";
+import {
+  ChevronDown,
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  MenuIcon,
+  TwitterIcon,
+  XMarkIcon,
+} from "../assets/icons";
 import { useState } from "react";
 
 const Header = () => {
@@ -12,7 +20,7 @@ const Header = () => {
       document.body.classList.remove("overflow-hidden");
     } else {
       document.body.classList.add("overflow-hidden");
-      setShow(false)
+      setShow(false);
     }
   };
 
@@ -20,23 +28,20 @@ const Header = () => {
     <header className="py-6 sticky top-0">
       <div className="container flex-between">
         <div className="flex items-center gap-8">
-          <Link
-            to="/"
-            className="text-3xl font-bold text-emerald-500 font-poppins"
-          >
+          <Link to="/" className="text-3xl font-bold text-emerald-500 ">
             BAUMco
           </Link>
           <nav className="hidden md:flex items-center gap-4">
             <NavLink
               to="/"
-              className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small"
+              className=" transition-all duration-150 hover:text-emerald-500  text-small"
               onClick={() => setShow(false)}
             >
               Home
             </NavLink>
             <div className="relative">
               <p
-                className="cursor-pointer flex items-center gap-1 transition-all duration-150 hover:text-emerald-500 font-poppins text-small"
+                className="cursor-pointer flex items-center gap-1 transition-all duration-150 hover:text-emerald-500  text-small"
                 onMouseEnter={() => setShow(true)}
               >
                 Electronics
@@ -76,14 +81,14 @@ const Header = () => {
             </div>
             <NavLink
               to="/forum"
-              className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small"
+              className=" transition-all duration-150 hover:text-emerald-500  text-small"
               onClick={() => setShow(false)}
             >
               Forum
             </NavLink>
             <NavLink
               to="/contact"
-              className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small"
+              className=" transition-all duration-150 hover:text-emerald-500  text-small"
               onClick={() => setShow(false)}
             >
               Contact
@@ -94,7 +99,7 @@ const Header = () => {
           <NavLink
             to="/login"
             className={
-              "transition-all duration-150 hover:text-emerald-500 font-poppins text-small p-2 rounded border border-transparent"
+              "transition-all duration-150 hover:text-emerald-500  text-small p-2 rounded border border-transparent"
             }
           >
             Login
@@ -102,7 +107,7 @@ const Header = () => {
           <NavLink
             to="/signup"
             className={
-              "transition-all duration-150 hover:text-emerald-500 font-poppins text-small bg-emerald-500 text-white p-2 rounded border border-transparent hover:bg-transparent hover:border-emerald-500"
+              "transition-all duration-150 hover:text-emerald-500  text-small bg-emerald-500 text-white p-2 rounded border border-transparent hover:bg-transparent hover:border-emerald-500"
             }
           >
             Signup
@@ -118,14 +123,14 @@ const Header = () => {
             </div>
             <NavLink
               to="/"
-              className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small block mb-4 p-3 hover:bg-gray-50 border-b border-b-gray-100"
+              className=" transition-all duration-150 hover:text-emerald-500  text-small block mb-4 p-3 hover:bg-gray-50 border-b border-b-gray-100"
               onClick={openNav}
             >
               Home
             </NavLink>
             <div className="relative">
               <p
-                className="cursor-pointer flex items-center gap-1 transition-all duration-150 hover:text-emerald-500 font-poppins text-small mb-4 p-3 hover:bg-gray-50 border-b border-b-gray-100"
+                className="cursor-pointer flex items-center gap-1 transition-all duration-150 hover:text-emerald-500  text-small mb-4 p-3 hover:bg-gray-50 border-b border-b-gray-100"
                 onClick={() => setShow((prev) => !prev)}
               >
                 Electronics
@@ -177,41 +182,46 @@ const Header = () => {
             </div>
             <NavLink
               to="/forum"
-              className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small block mb-4 p-3 hover:bg-gray-50 border-b border-b-gray-100"
+              className=" transition-all duration-150 hover:text-emerald-500  text-small block mb-4 p-3 hover:bg-gray-50 border-b border-b-gray-100"
               onClick={openNav}
             >
               Forum
             </NavLink>
             <NavLink
               to="/contact"
-              className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small block mb-4 p-3 hover:bg-gray-50 border-b border-b-gray-100"
+              className=" transition-all duration-150 hover:text-emerald-500  text-small block mb-4 p-3 hover:bg-gray-50 border-b border-b-gray-100"
               onClick={openNav}
             >
               Contact
             </NavLink>
             <NavLink
               to="/login"
-              className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small block mb-4 p-3 hover:bg-gray-50 border-b border-b-gray-100"
+              className=" transition-all duration-150 hover:text-emerald-500  text-small block mb-4 p-3 hover:bg-gray-50 border-b border-b-gray-100"
               onClick={openNav}
             >
               Login
             </NavLink>
             <NavLink
               to="/signup"
-              className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small block mb-4 p-3 hover:bg-gray-50 rounded bg-emerald-500 text-white border-2 border-transparent hover:border-emerald-500"
+              className=" transition-all duration-150 hover:text-emerald-500  text-small block mb-4 p-3 hover:bg-gray-50 rounded bg-emerald-500 text-white border-2 border-transparent hover:border-emerald-500"
               onClick={openNav}
             >
               Signup
             </NavLink>
             <div className="mt-4">
-              <Link to="/" className="inline-block mt-4 text-emerald-500 font-semibold font-poppins text-xl">BAUMco</Link>
+              <Link
+                to="/"
+                className="inline-block mt-4 text-emerald-500 font-semibold  text-xl"
+              >
+                BAUMco
+              </Link>
             </div>
-              <div className="flex gap-2 mt-3 mb-4">
-                <LinkedinIcon className="" />
-                <FacebookIcon className="" />
-                <InstagramIcon className="" />
-                <TwitterIcon className="" />
-              </div>
+            <div className="flex gap-2 mt-3 mb-4">
+              <LinkedinIcon className="" />
+              <FacebookIcon className="" />
+              <InstagramIcon className="" />
+              <TwitterIcon className="" />
+            </div>
           </div>
         </nav>
       </div>
