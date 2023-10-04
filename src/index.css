@@ -31,8 +31,13 @@ header nav a.active {
   font-size: 0.97rem;
 }
 
+.category-active {
+  @apply text-emerald-500;
+}
+
 .main-element {
   display: grid;
+  min-height: 100vh;
   grid-template-rows: auto 1fr auto;
 }
 

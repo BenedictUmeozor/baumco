@@ -12,11 +12,12 @@ const Header = () => {
       document.body.classList.remove("overflow-hidden");
     } else {
       document.body.classList.add("overflow-hidden");
+      setShow(false)
     }
   };
 
   return (
-    <header className="py-4 sticky top-0">
+    <header className="py-6 sticky top-0">
       <div className="container flex-between">
         <div className="flex items-center gap-8">
           <Link
@@ -29,6 +30,7 @@ const Header = () => {
             <NavLink
               to="/"
               className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small"
+              onClick={() => setShow(false)}
             >
               Home
             </NavLink>
@@ -75,12 +77,14 @@ const Header = () => {
             <NavLink
               to="/forum"
               className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small"
+              onClick={() => setShow(false)}
             >
               Forum
             </NavLink>
             <NavLink
               to="/contact"
               className=" transition-all duration-150 hover:text-emerald-500 font-poppins text-small"
+              onClick={() => setShow(false)}
             >
               Contact
             </NavLink>
@@ -108,7 +112,7 @@ const Header = () => {
           <MenuIcon className="w-10 cursor-pointer" />
         </div>
         <nav className={`md:hidden menu-nav ${mobileShow ? "active" : ""}`}>
-          <div className="md:hidden nav-links p-3 pt-10">
+          <div className="md:hidden nav-links p-3 pt-10 z-30">
             <div className="flex justify-end mb-4" onClick={openNav}>
               <XMarkIcon className="w-10 cursor-pointer" />
             </div>

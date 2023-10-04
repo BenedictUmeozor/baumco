@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import hero from "../assets/hero.svg";
-import LazyImage from "./LazyImage";
+import PropTypes from "prop-types";
 
 const Hero = ({ className }) => {
   return (
     <div className={className}>
       <div className="flex flex-col md:flex-row items-center justify-between gap-10">
         <div className="flex-1">
-          <LazyImage className={"w-full md:max-w-md"} src={hero} alt={"hero"} />
+          <img className={"w-full md:max-w-md"} src={hero} alt={"hero"} />
         </div>
         <p className="flex-1 text-gray-700">
           Elevate your tech prowess with{" "}
@@ -32,6 +32,10 @@ const Hero = ({ className }) => {
       </div>
     </div>
   );
+};
+
+Hero.propTypes = {
+  className: PropTypes.string,
 };
 
 export default Hero;
