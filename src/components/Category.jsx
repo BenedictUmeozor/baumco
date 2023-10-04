@@ -51,7 +51,7 @@ const Category = ({ category }) => {
             Latest post
           </h3>
           <Link className="text-gray-700" to={"/forum/post"}>
-            Lorem ipsum dolor sit amet.
+            Lorem ipsum dolor sit amet. <span className="text-xs">- Posted Sept 23, 2023 by <span className="text-emerald-500">John Doe</span></span>
           </Link>
         </div>
         <div>
@@ -78,17 +78,17 @@ const Category = ({ category }) => {
           <ul>
             <li className="mb-1">
               <Link className="text-gray-700" to={"/forum/post"}>
-                Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet <span className="text-xs">- Posted Sept 23, 2023 by <span className="text-emerald-500">John Doe</span></span>
               </Link>
             </li>
             <li className="mb-1">
               <Link className="text-gray-700" to={"/forum/post"}>
-                Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet <span className="text-xs">- Posted Sept 23, 2023 by <span className="text-emerald-500">John Doe</span></span>
               </Link>
             </li>
             <li className="mb-1">
               <Link className="text-gray-700" to={"/forum/post"}>
-                Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet <span className="text-xs">- Posted Sept 23, 2023 by <span className="text-emerald-500">John Doe</span></span>
               </Link>
             </li>
           </ul>
